@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = RailsSetup::VERSION
   s.authors     = ["Jordan Byron"]
   s.email       = ["jordan.byron@gmail.com"]
-  s.homepage    = "https://github.com/jordanbyron/rails_setup"
+  s.homepage    = "https://github.com/elm-city-craftworks/rails_setup"
   s.summary     = "Helper methods for better rake setup tasks"
   s.description = "Helper methods for better rake setup tasks"
 
