@@ -49,6 +49,9 @@ module RailsSetup
       return_value
     end
 
+    # Creates a file based on a '.example' version saved in the same folder
+    # Will optionally open the new file in the default editor after creation
+    #
     def create_file(file, name, requires_edit=false)
       FileUtils.cp(file + '.example', file)
 
@@ -56,6 +59,16 @@ module RailsSetup
         puts "Update #{file} and run `bundle exec rake setup` to continue".color(:red)
         system(ENV['EDITOR'], file) unless ENV['EDITOR'].blank?
         exit
+      end
+    end
+
+    # Looks for the specificed file and creates it if it does not exist
+    #
+    def find_or_create_file(file, name, requires_edit=false)
+      if File.exists?(file)
+        file
+      else
+        create_file(file, name, requires_edit)
       end
     end
   end
