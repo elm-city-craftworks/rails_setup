@@ -1,5 +1,13 @@
-def setup_task(name)
-  task name => [:setup_environment] do
+def setup_task(options)
+  name = options
+  env  = [:setup_environment]
+
+  if Hash === options
+    name = options.keys.first
+    env += options.values.flatten
+  end
+
+  task name => env do
     yield
   end
 end
