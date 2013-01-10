@@ -1,4 +1,5 @@
 # Rails Setup
+[![Gem Version](https://badge.fury.io/rb/rails_setup.png)](http://badge.fury.io/rb/rails_setup)
 
 Make it easier for developers to get your rails app up and running with a little
 help from Rails Setup. Rails Setup adds a few handy rake tasks which will
