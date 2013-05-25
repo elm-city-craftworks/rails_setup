@@ -56,9 +56,8 @@ module RailsSetup
       FileUtils.cp(file + '.example', file)
 
       if requires_edit
-        puts "Update #{file} and run `bundle exec rake setup` to continue".color(:red)
+        puts "Editing file #{file}".color(:red)
         system(ENV['EDITOR'], file) unless ENV['EDITOR'].blank?
-        exit
       end
     end
 
